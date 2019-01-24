@@ -66,8 +66,10 @@
 
         </div>
 
-        <div id="imgDiv" align="center">
-            <img id="img" :src="iconUrl">
+        <div id="imgDiv" align="center" >
+            <div style="width: 350px;height: 350px;text-align:center;vertical-align:middle;display:table-cell">
+                <img id="img" :src="iconUrl" style="max-width: 100%;max-height: 100%">
+            </div>
         </div>
 
         <!--<div style="position: fixed;bottom: 8%;width: 10%;left: 45%" align="center">
@@ -104,10 +106,8 @@
     var height = document.documentElement.clientHeight;
     var width = document.documentElement.clientWidth;
 
-    $("#emptyDiv").css("height", height * 0.40);
-    $("#imgDiv").css("height", height * 0.35);
-    $("#img").css("max-width", '200px');
-    $("#img").css("max-hight", height * 0.35);
+    $("#emptyDiv").css("height", height * 0.3);
+    $("#imgDiv").css("height", height * 0.4);
 
     $(document).keydown(function (event) {
         if (event.keyCode == 32) {
@@ -454,7 +454,7 @@
                     setTimeout(function () {
                         _this.time++;
                         _this.imgChange();
-                    }, 850)
+                    }, 1050)
                 } else if (_this.time == _this.imgList.length) {
                     console.log(_this.imgList);
 
@@ -462,7 +462,7 @@
                         _this.isNext = true
                         console.log(_this.imgList)
                         $('#modal').modal('show');
-                    }, 850)
+                    }, 1050)
                 }
             },
 
@@ -477,7 +477,7 @@
                     setTimeout(function () {
                         _this.testTime++;
                         _this.testImgChange();
-                    }, 850)
+                    }, 1050)
                 } else if (_this.testTime == _this.testList.length) {
 
 
@@ -488,7 +488,7 @@
                         _this.inCycle = false;
                         _this.iconUrl = '';
                         _this.isPickSquirrel = 0;
-                    }, 850)
+                    }, 1050)
                 }
             },
 
@@ -497,7 +497,7 @@
 
                 setTimeout(function () {
                     _this.iconUrl = '';
-                }, 600)
+                }, 800)
             },
 
             pickSquirrel: function () {

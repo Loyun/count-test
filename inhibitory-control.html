@@ -66,8 +66,8 @@
         <div id="emptyDiv">
 
         </div>
-        <div id="imgDiv" align="center">
-            <img id="img" :src="iconUrl">
+        <div style="width: 350px;height: 350px;text-align:center;vertical-align:middle;display:table-cell">
+            <img id="img" :src="iconUrl" style="max-width: 100%;max-height: 100%">
         </div>
 
         <!--<div style="position: fixed;bottom: 8%;width: 10%;left: 45%" align="center">
@@ -98,8 +98,7 @@
     console.log(imgList)
 
     $("#emptyDiv").css("height", height * 0.3);
-    $("#img").css("max-width", width * 0.3);
-    $("#img").css("max-hight", height * 0.35);
+    $("#imgDiv").css("height", height * 0.4);
 
     $(document).keydown(function (event) {
         if (event.keyCode == 32) {
@@ -885,12 +884,12 @@
                     setTimeout(function () {
                         _this.time++;
                         _this.imgChange();
-                    }, 850)
+                    }, 1050)
                 } else if (_this.time == _this.animal.length) {
                     setTimeout(function () {
                         $('#modal').modal('show');
                         _this.transListOne()
-                    }, 850)
+                    }, 1050)
                 }
             },
 
@@ -899,7 +898,7 @@
 
                 setTimeout(function () {
                     _this.iconUrl = '';
-                }, 600)
+                }, 800)
             },
 
             pickSquirrel: function () {
